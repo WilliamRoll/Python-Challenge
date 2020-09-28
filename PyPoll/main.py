@@ -39,12 +39,32 @@ correy_count = candidates.count("Correy")
 li_count = candidates.count("Li")
 otooley_count = candidates.count("O'Tooley")
 
+#header
 print("Election Results")
+#break
 print("-------------------------")
+#total number of votes cast
 print("Total Votes: " + str(total_votes))
+#break
 print("-------------------------")
+#percentage of votes and number of votes for each candidate 
 print("Khan: " + str((khan_count/total_votes)*100) + "% " + " (" + str(khan_count) + ")")
 print("Correy: " + str((correy_count/total_votes)*100) + "% " + " (" + str(correy_count) + ")")
 print("Li: " + str((li_count/total_votes)*100) + "% " + " (" + str(li_count) + ")")
 print("O'Tooley: " + str((otooley_count/total_votes)*100) + "% " + " (" + str(otooley_count) + ")")
 
+#break
+print("-------------------------")
+
+#winner of the elcetion based on popular vote
+if khan_count > correy_count and khan_count > li_count and khan_count > otooley_count:
+    print("Winner: Khan")
+elif correy_count > khan_count and correy_count > li_count and correy_count > otooley_count:
+    print("Winner: Correy")
+elif li_count > khan_count and li_count > correy_count and li_count > otooley_count:
+    print("Winner: Li")
+elif otooley_count > khan_count and otooley_count > correy_count and otooley_count > li_count:
+    print("Winner: O'Tooley")
+
+#break
+print("-------------------------")
