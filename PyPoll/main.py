@@ -20,6 +20,9 @@ election_csv = os.path.join("Resources", "election_data.csv")
 with open(election_csv) as csvfile:
     csv_reader = csv.reader(csvfile, delimiter = ",")
 
+    #column header
+    csv_header = next (csv_reader)
+
     #create loop to go through all rows
     for row in csv_reader:
        
@@ -36,6 +39,7 @@ correy_count = candidates.count("Correy")
 li_count = candidates.count("Li")
 otooley_count = candidates.count("O'Tooley")
 
+print(total_votes)
 print(khan_count)
 print(correy_count)
 print(li_count)
