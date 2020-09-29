@@ -15,8 +15,7 @@ revenue = []
 avg_change = []
 
 #Set path for file
-budget_csv = os.path.join("..","Resources", "budget_data.csv")
-print(budget_csv)
+budget_csv = os.path.join("Resources", "budget_data.csv")
 
 with open(budget_csv) as csvfile:
     csv_reader = csv.reader(csvfile, delimiter = ",")
@@ -67,7 +66,7 @@ output_file = os.path.join("Analysis", "budget_data.txt")
 #open the file write mode
 with open(output_file, "w") as txtfile:
 
-    #write headers and columns 
+    #write headers and columns for summary table
     txtfile.write("Financial Analysis" +"\n")
     txtfile.write("----------------------------"+"\n")
 
