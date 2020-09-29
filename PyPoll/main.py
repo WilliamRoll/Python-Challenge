@@ -48,10 +48,10 @@ print("Total Votes: " + str(total_votes))
 #break
 print("-------------------------")
 #percentage of votes and number of votes for each candidate 
-print("Khan: " + str((khan_count/total_votes)*100) + "% " + " (" + str(khan_count) + ")")
-print("Correy: " + str((correy_count/total_votes)*100) + "% " + " (" + str(correy_count) + ")")
-print("Li: " + str((li_count/total_votes)*100) + "% " + " (" + str(li_count) + ")")
-print("O'Tooley: " + str((otooley_count/total_votes)*100) + "% " + " (" + str(otooley_count) + ")")
+print("Khan: " + str(format(round((khan_count/total_votes)*100),'.3f')) + "% " + " (" + str(khan_count) + ")")
+print("Correy: " + str(format(round((correy_count/total_votes)*100), '.3f')) + "% " + " (" + str(correy_count) + ")")
+print("Li: " + str(format(round((li_count/total_votes)*100), '.3f')) + "% " + " (" + str(li_count) + ")")
+print("O'Tooley: " + str(format(round((otooley_count/total_votes)*100), '.3f')) + "% " + " (" + str(otooley_count) + ")")
 
 #break
 print("-------------------------")
@@ -82,20 +82,20 @@ with open(output_file, "w") as txtfile:
     txtfile.write("Total Votes: " + str(total_votes)+"\n")
     txtfile.write("-------------------------"+"\n")
 
-    txtfile.write("Khan: " + str((khan_count/total_votes)*100) + "% " + " (" + str(khan_count) + ")""\n")
-    txtfile.write("Correy: " + str((correy_count/total_votes)*100) + "% " + " (" + str(correy_count) + ")"+"\n")
-    txtfile.write("Li: " + str((li_count/total_votes)*100) + "% " + " (" + str(li_count) + ")"+"\n")
-    txtfile.write("O'Tooley: " + str((otooley_count/total_votes)*100) + "% " + " (" + str(otooley_count) + ")"+"\n")
+    txtfile.write("Khan: " + str(format(round((khan_count/total_votes)*100), '.3f')) + "% " + " (" + str(khan_count) + ")""\n")
+    txtfile.write("Correy: " + str(format(round((correy_count/total_votes)*100), '.3f')) + "% " + " (" + str(correy_count) + ")"+"\n")
+    txtfile.write("Li: " + str(format(round((li_count/total_votes)*100), '.3f')) + "% " + " (" + str(li_count) + ")"+"\n")
+    txtfile.write("O'Tooley: " + str(format(round((otooley_count/total_votes)*100), '.3f')) + "% " + " (" + str(otooley_count) + ")"+"\n")
     txtfile.write("-------------------------"+"\n")
     
     if khan_count > correy_count and khan_count > li_count and khan_count > otooley_count:
-        txtfile.write("Winner: Khan")
+        txtfile.write("Winner: Khan"+"\n")
     elif correy_count > khan_count and correy_count > li_count and correy_count > otooley_count:
-        txtfile.write("Winner: Correy")
+        txtfile.write("Winner: Correy"+"\n")
     elif li_count > khan_count and li_count > correy_count and li_count > otooley_count:
-        txtfile.write("Winner: Li")
+        txtfile.write("Winner: Li"+"\n")
     elif otooley_count > khan_count and otooley_count > correy_count and otooley_count > li_count:
-        txtfile.write("Winner: O'Tooley")
-
+        txtfile.write("Winner: O'Tooley"+"\n")
+    txtfile.write("-------------------------"+"\n")
 
     txtfile.close()
