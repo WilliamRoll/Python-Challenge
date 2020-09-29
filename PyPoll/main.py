@@ -68,3 +68,34 @@ elif otooley_count > khan_count and otooley_count > correy_count and otooley_cou
 
 #break
 print("-------------------------")
+
+#set variable for output file
+output_file = os.path.join("Analysis", "polling_data.txt")
+
+#open the file write mode
+with open(output_file, "w") as txtfile:
+
+    #write headers and columns for summary table
+    txtfile.write("Election Results" +"\n")
+    txtfile.write("-------------------------"+"\n")
+
+    txtfile.write("Total Votes: " + str(total_votes)+"\n")
+    txtfile.write("-------------------------"+"\n")
+
+    txtfile.write("Khan: " + str((khan_count/total_votes)*100) + "% " + " (" + str(khan_count) + ")""\n")
+    txtfile.write("Correy: " + str((correy_count/total_votes)*100) + "% " + " (" + str(correy_count) + ")"+"\n")
+    txtfile.write("Li: " + str((li_count/total_votes)*100) + "% " + " (" + str(li_count) + ")"+"\n")
+    txtfile.write("O'Tooley: " + str((otooley_count/total_votes)*100) + "% " + " (" + str(otooley_count) + ")"+"\n")
+    txtfile.write("-------------------------"+"\n")
+    
+    if khan_count > correy_count and khan_count > li_count and khan_count > otooley_count:
+        txtfile.write("Winner: Khan")
+    elif correy_count > khan_count and correy_count > li_count and correy_count > otooley_count:
+        txtfile.write("Winner: Correy")
+    elif li_count > khan_count and li_count > correy_count and li_count > otooley_count:
+        txtfile.write("Winner: Li")
+    elif otooley_count > khan_count and otooley_count > correy_count and otooley_count > li_count:
+        txtfile.write("Winner: O'Tooley")
+
+
+    txtfile.close()
