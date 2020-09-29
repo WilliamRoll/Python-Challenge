@@ -39,6 +39,7 @@ correy_count = candidates.count("Correy")
 li_count = candidates.count("Li")
 otooley_count = candidates.count("O'Tooley")
 
+#Display Results
 #header
 print("Election Results")
 #break
