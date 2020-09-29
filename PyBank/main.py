@@ -57,8 +57,8 @@ average_monthly_change = sum(avg_change) / (month_count - 1)
 print("Total Months: " + str(month_count))
 print("Total: " + "$"+str(sum(revenue)))
 print("Average Change: " + "$"+str(round(average_monthly_change,2)))
-print("Greatest Increase in Profits: " + str(month[avg_change.index(max_rev)+1]) + " $"+str(max_rev))
-print("Greates Decrease in Profits: " + str(month[avg_change.index(min_rev)+1]) + " $"+str(min_rev))
+print("Greatest Increase in Profits: " + str(month[avg_change.index(max_rev)+1]) + " ($"+str(max_rev) + ")")
+print("Greates Decrease in Profits: " + str(month[avg_change.index(min_rev)+1]) + " ($"+str(min_rev) + ")")
 
 #set variable for output file
 output_file = os.path.join("Analysis", "budget_data.txt")
@@ -73,8 +73,8 @@ with open(output_file, "w") as txtfile:
     txtfile.write("Total Months: " + str(month_count)+"\n")
     txtfile.write("Total: " + "$"+str(sum(revenue))+"\n")
     txtfile.write("Average Change: " + "$"+str(round(average_monthly_change,2))+"\n")
-    txtfile.write("Greatest Increase in Profits: " + str(month[avg_change.index(max_rev)+1]) + " $"+str(max_rev)+"\n")
-    txtfile.write("Greates Decrease in Profits: " + str(month[avg_change.index(min_rev)+1]) + " $"+str(min_rev)+"\n")
+    txtfile.write("Greatest Increase in Profits: " + str(month[avg_change.index(max_rev)+1]) + " ($"+str(max_rev) +")"+"\n")
+    txtfile.write("Greates Decrease in Profits: " + str(month[avg_change.index(min_rev)+1]) + " ($"+str(min_rev) +")"+"\n") 
 
     txtfile.close()
 
