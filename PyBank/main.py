@@ -54,11 +54,25 @@ with open(budget_csv) as csvfile:
 average_monthly_change = sum(avg_change) / (month_count - 1)
 
 #display_results
+#header
+print("Financial Analysis")
+
+#break
+print("-------------------------")
+
+#total number of months
 print("Total Months: " + str(month_count))
+
+#total profit/loss
 print("Total: " + "$"+str(sum(revenue)))
+
+#Avg of changes in profit/loss
 print("Average Change: " + "$"+str(round(average_monthly_change,2)))
+
+#greatest increase / decrease in profit/loss
 print("Greatest Increase in Profits: " + str(month[avg_change.index(max_rev)+1]) + " ($"+str(max_rev) + ")")
 print("Greates Decrease in Profits: " + str(month[avg_change.index(min_rev)+1]) + " ($"+str(min_rev) + ")")
+
 
 #set variable for output file
 output_file = os.path.join("Analysis", "budget_data.txt")
